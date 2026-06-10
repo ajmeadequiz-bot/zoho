@@ -1,304 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Registration Options</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration Options</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 16px;
+    }
 
-<style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'PKFGlobalSans-Regular', sans-serif;
-}
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-body {
-  background: #ffffff;
-  color: #000;
-  padding: 16px;
-}
+    /* DESKTOP TABLE */
+    .table-wrap {
+      display: block;
+      overflow-x: auto;
+    }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
 
-.table-wrap {
-  overflow-x: auto;
-}
+    th, td {
+      border: 1px solid #999;
+      padding: 12px;
+      text-align: center;
+      vertical-align: middle;
+    }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-  font-size: 14px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
-}
+    th {
+      background: #103880;
+      color: #fff;
+    }
 
-th, td {
-  padding: 10px 8px;
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
+    .subhead th {
+      background: #0eb4da;
+    }
 
-th {
-  background: #103880;
-  color: #fff;
-  font-weight: bold;
-}
+    .package {
+      text-align: left;
+      font-weight: bold;
+      background: #f5f5f5;
+    }
 
-.subhead th {
-  background: #0eb4da;
-}
+    .type {
+      text-align: left;
+    }
 
-.left { text-align: left; }
+    .tick {
+      color: #2ca02c;
+      font-weight: bold;
+    }
 
-.package {
-  font-weight: bold;
-  background: #f8f9fb;
-}
+    .cross {
+      color: #e42725;
+      font-weight: bold;
+    }
 
-.tick {
-  color: #6ebf08;
-  font-size: 20px;
-  font-weight: bold;
-}
+    /* MOBILE CARDS */
+    .mobile {
+      display: none;
+    }
 
-.cross {
-  color: #e42725;
-  font-size: 20px;
-  font-weight: bold;
-}
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
 
-.mobile-cards { display: none; }
+    .card h3 {
+      margin: 0 0 5px 0;
+      color: #103880;
+    }
 
-.card {
-  border-radius: 10px;
-  padding: 16px;
-  margin-bottom: 16px;
-  background: #fff;
-  box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
-}
+    .price {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
 
-.card h3 {
-  font-size: 18px;
-  color: #103880;
-  font-family: 'PKFGlobalSans-Bold', sans-serif;
-  margin-bottom: 6px;
-}
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 6px 0;
+      border-bottom: 1px solid #eee;
+    }
 
-.price {
-  font-weight: bold;
-  color: #0eb4da;
-  margin-bottom: 12px;
-}
+    .row:last-child {
+      border-bottom: none;
+    }
 
-.feature-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 0;
-  border-bottom: 1px solid #eee;
-}
+    .row span:first-child {
+      text-align: left;
+      flex: 1;
+    }
 
-.feature-row:last-child { border-bottom: none; }
+    .row span:last-child {
+      text-align: right;
+      min-width: 20px;
+    }
 
-.feature-label { flex: 1; text-align: left; }
-.feature-value { text-align: right; }
-
-@media (max-width: 768px) {
-  .table-wrap { display: none; }
-  .mobile-cards { display: block; }
-}
-</style>
+    /* RESPONSIVE SWITCH */
+    @media (max-width: 768px) {
+      .table-wrap { display: none; }
+      .mobile { display: block; }
+    }
+  </style>
 </head>
-
 <body>
-<div class="container">
+  <div class="container">
 
-<!-- TABLE -->
-<div class="table-wrap">
-<table>
-<tr>
-<th colspan="2">Registration Options</th>
-<th>Fee</th>
-<th colspan="7">What is and is not included</th>
-</tr>
+    <!-- DESKTOP TABLE -->
+    <div class="table-wrap">
+      <table>
+        <tr>
+          <th rowspan="2">Package</th>
+          <th rowspan="2">Type</th>
+          <th rowspan="2">Euro, €</th>
+          <th colspan="7">What is and is not included</th>
+        </tr>
+        <tr class="subhead">
+          <th>Tue 3 Nov<br>Conference</th>
+          <th>Tue 3 Nov<br>Dinner</th>
+          <th>Wed 4 Nov<br>Conference</th>
+          <th>Wed 4 Nov<br>Dinner</th>
+          <th>Thu 5 Nov<br>Conference</th>
+          <th>Thu 5 Nov<br>Dinner</th>
+          <th>Fri 6 Nov<br>Conference</th>
+        </tr>
 
-<tr>
-<th>Package</th>
-<th>Type</th>
-<th>Euro, €</th>
-<th colspan="2">Tue 3 Nov</th>
-<th colspan="2">Wed 4 Nov</th>
-<th colspan="2">Thu 5 Nov</th>
-<th>Fri 6 Nov</th>
-</tr>
+        <tr>
+          <td class="package" rowspan="2">Technical</td>
+          <td class="type">Manager</td>
+          <td>€1,200</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="cross">✗</td>
+          <td class="cross">✗</td>
+          <td class="cross">✗</td>
+        </tr>
+        <tr>
+          <td class="type">Partner</td>
+          <td>€1,375</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="cross">✗</td>
+          <td class="cross">✗</td>
+          <td class="cross">✗</td>
+        </tr>
 
-<tr class="subhead">
-<th></th><th></th><th></th>
-<th>Conference</th><th>Dinner</th>
-<th>Conference</th><th>Dinner</th>
-<th>Conference</th><th>Dinner</th>
-<th>Conference</th>
-</tr>
+        <tr>
+          <td class="package" rowspan="2">Core</td>
+          <td class="type">Manager</td>
+          <td>€1,650</td>
+          <td class="cross">✗</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+        </tr>
+        <tr>
+          <td class="type">Partner</td>
+          <td>€1,850</td>
+          <td class="cross">✗</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+        </tr>
 
-<!-- DATA ROWS -->
-<tr>
-<td class="package" rowspan="2">Technical</td>
-<td class="left">Manager</td>
-<td>€1,200</td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="cross">✗</span></td>
-<td><span class="cross">✗</span></td>
-<td><span class="cross">✗</span></td>
-</tr>
+        <tr>
+          <td class="package" rowspan="2">Global</td>
+          <td class="type">Manager</td>
+          <td>€2,150</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+        </tr>
+        <tr>
+          <td class="type">Partner</td>
+          <td>€2,450</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+          <td class="tick">✓</td>
+        </tr>
+      </table>
+    </div>
 
-<tr>
-<td class="left">Partner</td>
-<td>€1,375</td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="cross">✗</span></td>
-<td><span class="cross">✗</span></td>
-<td><span class="cross">✗</span></td>
-</tr>
+    <!-- MOBILE VERSION -->
+    <div class="mobile">
+      <div class="card">
+        <h3>Technical – Manager</h3>
+        <div class="price">€1,200</div>
+        <div class="row"><span>Tue 3 Nov – Conference</span><span class="tick">✓</span></div>
+        <div class="row"><span>Tue 3 Nov – Dinner</span><span class="tick">✓</span></div>
+        <div class="row"><span>Wed 4 Nov – Conference</span><span class="tick">✓</span></div>
+        <div class="row"><span>Wed 4 Nov – Dinner</span><span class="tick">✓</span></div>
+        <div class="row"><span>Thu 5 Nov – Conference</span><span class="cross">✗</span></div>
+        <div class="row"><span>Thu 5 Nov – Dinner</span><span class="cross">✗</span></div>
+        <div class="row"><span>Fri 6 Nov – Conference</span><span class="cross">✗</span></div>
+      </div>
 
-<tr>
-<td class="package" rowspan="2">Core</td>
-<td class="left">Manager</td>
-<td>€1,650</td>
-<td><span class="cross">✗</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-</tr>
+      <div class="card">
+        <h3>Technical – Partner</h3>
+        <div class="price">€1,375</div>
+        <div class="row"><span>Tue 3 Nov – Conference</span><span class="tick">✓</span></div>
+        <div class="row"><span>Tue 3 Nov – Dinner</span><span class="tick">✓</span></div>
+        <div class="row"><span>Wed 4 Nov – Conference</span><span class="tick">✓</span></div>
+        <div class="row"><span>Wed 4 Nov – Dinner</span><span class="tick">✓</span></div>
+        <div class="row"><span>Thu 5 Nov – Conference</span><span class="cross">✗</span></div>
+        <div class="row"><span>Thu 5 Nov – Dinner</span><span class="cross">✗</span></div>
+        <div class="row"><span>Fri 6 Nov – Conference</span><span class="cross">✗</span></div>
+      </div>
 
-<tr>
-<td class="left">Partner</td>
-<td>€1,850</td>
-<td><span class="cross">✗</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-</tr>
+      <div class="card">
+        <h3>Core – Manager</h3>
+        <div class="price">€1,650</div>
+        <div class="row"><span>Tue 3 Nov – Conference</span><span class="cross">✗</span></div>
+        <div class="row"><span>Tue 3 Nov – Dinner</span><span class="tick">✓</span></div>
+        <div class="row"><span>Wed 4 Nov – Conference</span><span class="tick">✓</span></div>
+        <div class="row"><span>Wed 4 Nov – Dinner</span><span class="tick">✓</span></div>
+        <div class="row"><span>Thu 5 Nov – Conference</span><span class="tick">✓</span></div>
+        <div class="row"><span>Thu 5 Nov – Dinner</span><span class="tick">✓</span></div>
+        <div class="row"><span>Fri 6 Nov – Conference</span><span class="tick">✓</span></div>
+      </div>
 
-<tr>
-<td class="package" rowspan="2">Global</td>
-<td class="left">Manager</td>
-<td>€2,150</td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-</tr>
+      <div class="card">
+        <h3>Core – Partner</h3>
+        <div class="price">€1,850</div>
+        <div class="row"><span>Tue 3 Nov – Conference</span><span class="cross">✗</span></div>
+        <div class="row"><span>Tue 3 Nov – Dinner</span><span class="tick">✓</span></div>
+        <div class="row"><span>Wed 4 Nov – Conference</span><span class="tick">✓</span></div>
+        <div class="row"><span>Wed 4 Nov – Dinner</span><span class="tick">✓</span></div>
+        <div class="row"><span>Thu 5 Nov – Conference</span><span class="tick">✓</span></div>
+        <div class="row"><span>Thu 5 Nov – Dinner</span><span class="tick">✓</span></div>
+        <div class="row"><span>Fri 6 Nov – Conference</span><span class="tick">✓</span></div>
+      </div>
 
-<tr>
-<td class="left">Partner</td>
-<td>€2,450</td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-<td><span class="tick">✓</span></td>
-</tr>
-</table>
-</div>
+      <div class="card">
+        <h3>Global – Manager</h3>
+        <div class="price">€2,150</div>
+        <div class="row"><span>Tue 3 Nov – Conference</span><span class="tick">✓</span></div>
+        <div class="row"><span>Tue 3 Nov – Dinner</span><span class="tick">✓</span></div>
+        <div class="row"><span>Wed 4 Nov – Conference</span><span class="tick">✓</span></div>
+        <div class="row"><span>Wed 4 Nov – Dinner</span><span class="tick">✓</span></div>
+        <div class="row"><span>Thu 5 Nov – Conference</span><span class="tick">✓</span></div>
+        <div class="row"><span>Thu 5 Nov – Dinner</span><span class="tick">✓</span></div>
+        <div class="row"><span>Fri 6 Nov – Conference</span><span class="tick">✓</span></div>
+      </div>
 
-<!-- MOBILE CARDS -->
-<div class="mobile-cards">
+      <div class="card">
+        <h3>Global – Partner</h3>
+        <div class="price">€2,450</div>
+        <div class="row"><span>Tue 3 Nov – Conference</span><span class="tick">✓</span></div>
+        <div class="row"><span>Tue 3 Nov – Dinner</span><span class="tick">✓</span></div>
+        <div class="row"><span>Wed 4 Nov – Conference</span><span class="tick">✓</span></div>
+        <div class="row"><span>Wed 4 Nov – Dinner</span><span class="tick">✓</span></div>
+        <div class="row"><span>Thu 5 Nov – Conference</span><span class="tick">✓</span></div>
+        <div class="row"><span>Thu 5 Nov – Dinner</span><span class="tick">✓</span></div>
+        <div class="row"><span>Fri 6 Nov – Conference</span><span class="tick">✓</span></div>
+      </div>
+    </div>
 
-<div class="card">
-<h3>Technical – Manager</h3>
-<div class="price">€1,200</div>
-<div class="feature-row"><div class="feature-label">Tue 3 Nov – Conference</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Tue 3 Nov – Dinner</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Wed 4 Nov – Conference</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Wed 4 Nov – Dinner</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Thu 5 Nov – Conference</div><div class="feature-value cross">✗</div></div>
-<div class="feature-row"><div class="feature-label">Thu 5 Nov – Dinner</div><div class="feature-value cross">✗</div></div>
-<div class="feature-row"><div class="feature-label">Fri 6 Nov – Conference</div><div class="feature-value cross">✗</div></div>
-</div>
-
-<div class="card">
-<h3>Technical – Partner</h3>
-<div class="price">€1,375</div>
-<div class="feature-row"><div class="feature-label">Tue 3 Nov – Conference</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Tue 3 Nov – Dinner</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Wed 4 Nov – Conference</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Wed 4 Nov – Dinner</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Thu 5 Nov – Conference</div><div class="feature-value cross">✗</div></div>
-<div class="feature-row"><div class="feature-label">Thu 5 Nov – Dinner</div><div class="feature-value cross">✗</div></div>
-<div class="feature-row"><div class="feature-label">Fri 6 Nov – Conference</div><div class="feature-value cross">✗</div></div>
-</div>
-
-<div class="card">
-<h3>Core – Manager</h3>
-<div class="price">€1,650</div>
-<div class="feature-row"><div class="feature-label">Tue 3 Nov – Conference</div><div class="feature-value cross">✗</div></div>
-<div class="feature-row"><div class="feature-label">Tue 3 Nov – Dinner</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Wed 4 Nov – Conference</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Wed 4 Nov – Dinner</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Thu 5 Nov – Conference</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Thu 5 Nov – Dinner</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Fri 6 Nov – Conference</div><div class="feature-value tick">✓</div></div>
-</div>
-
-<div class="card">
-<h3>Core – Partner</h3>
-<div class="price">€1,850</div>
-<div class="feature-row"><div class="feature-label">Tue 3 Nov – Conference</div><div class="feature-value cross">✗</div></div>
-<div class="feature-row"><div class="feature-label">Tue 3 Nov – Dinner</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Wed 4 Nov – Conference</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Wed 4 Nov – Dinner</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Thu 5 Nov – Conference</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Thu 5 Nov – Dinner</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Fri 6 Nov – Conference</div><div class="feature-value tick">✓</div></div>
-</div>
-
-<div class="card">
-<h3>Global – Manager</h3>
-<div class="price">€2,150</div>
-<div class="feature-row"><div class="feature-label">Tue 3 Nov – Conference</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Tue 3 Nov – Dinner</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Wed 4 Nov – Conference</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Wed 4 Nov – Dinner</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Thu 5 Nov – Conference</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Thu 5 Nov – Dinner</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Fri 6 Nov – Conference</div><div class="feature-value tick">✓</div></div>
-</div>
-
-<div class="card">
-<h3>Global – Partner</h3>
-<div class="price">€2,450</div>
-<div class="feature-row"><div class="feature-label">Tue 3 Nov – Conference</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Tue 3 Nov – Dinner</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Wed 4 Nov – Conference</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Wed 4 Nov – Dinner</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Thu 5 Nov – Conference</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Thu 5 Nov – Dinner</div><div class="feature-value tick">✓</div></div>
-<div class="feature-row"><div class="feature-label">Fri 6 Nov – Conference</div><div class="feature-value tick">✓</div></div>
-</div>
-
-</div>
-</div>
+  </div>
 </body>
 </html>
+``
