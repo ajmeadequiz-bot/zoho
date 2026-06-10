@@ -3,56 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Registration Options</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 16px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* TABLE */
+.table-wrap {
+  display: block;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background: #103880;
+  color: #fff;
+}
+
+.subhead th {
+  background: #0eb4da;
+}
+
+.package {
+  text-align: left;
+  font-weight: bold;
+  background: #f5f5f5;
+}
+
+.tick { color: #2ca02c; font-weight: bold; }
+.cross { color: #e42725; font-weight: bold; }
+
+/* MOBILE CARDS */
+.mobile {
+  display: none;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  margin-bottom: 5px;
+  color: #103880;
+}
+
+.price {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* RESPONSIVE SWITCH */
+@media (max-width: 768px) {
+  .table-wrap { display: none; }
+  .mobile { display: block; }
+}
+</style>
+
 </head>
 
-<body style="font-family: Arial, sans-serif; background:#ffffff; margin:0; padding:20px;">
+<body>
 
-<div style="max-width:900px; margin:0 auto;">
+<div class="container">
 
-<table style="width:100%; border-collapse:collapse; table-layout:fixed; font-size:15px;">
+<!-- DESKTOP TABLE -->
+<div class="table-wrap">
+<table>
 
 <tr>
-  <th rowspan="2" style="background:#103880; color:#ffffff; border:1px solid #999; padding:12px;">Package</th>
-  <th rowspan="2" style="background:#103880; color:#ffffff; border:1px solid #999; padding:12px;">Euro, €</th>
-  <th colspan="3" style="background:#103880; color:#ffffff; border:1px solid #999; padding:12px;">
-    What is and is not included
-  </th>
+  <th rowspan="2">Package</th>
+  <th rowspan="2">Euro, €</th>
+  <th colspan="3">What is and is not included</th>
+</tr>
+
+<tr class="subhead">
+  <th>Tue 3 Nov<br>Dinner</th>
+  <th>Wed 4 Nov<br>Dinner</th>
+  <th>Thu 5 Nov<br>Dinner</th>
 </tr>
 
 <tr>
-  <th style="background:#0eb4da; color:#ffffff; border:1px solid #999; padding:12px;">
-    Tue 3 Nov<br>Dinner
-  </th>
-  <th style="background:#0eb4da; color:#ffffff; border:1px solid #999; padding:12px;">
-    Wed 4 Nov<br>Dinner
-  </th>
-  <th style="background:#0eb4da; color:#ffffff; border:1px solid #999; padding:12px;">
-    Thu 5 Nov<br>Dinner
-  </th>
+  <td class="package">Technical</td>
+  <td>€450</td>
+  <td class="tick">✓</td>
+  <td class="tick">✓</td>
+  <td class="cross">✗</td>
 </tr>
 
 <tr>
-  <td style="border:1px solid #999; padding:12px; text-align:left; font-weight:bold; background:#f5f5f5;">
-    Technical
-  </td>
-  <td style="border:1px solid #999; padding:12px;">€450</td>
-  <td style="border:1px solid #999; padding:12px; color:#2ca02c; font-weight:bold; font-size:18px;">✓</td>
-  <td style="border:1px solid #999; padding:12px; color:#2ca02c; font-weight:bold; font-size:18px;">✓</td>
-  <td style="border:1px solid #999; padding:12px; color:#e42725; font-weight:bold; font-size:18px;">✗</td>
-</tr>
-
-<tr>
-  <td style="border:1px solid #999; padding:12px; text-align:left; font-weight:bold; background:#f5f5f5;">
-    Core / Global
-  </td>
-  <td style="border:1px solid #999; padding:12px;">€700</td>
-  <td style="border:1px solid #999; padding:12px; color:#2ca02c; font-weight:bold; font-size:18px;">✓</td>
-  <td style="border:1px solid #999; padding:12px; color:#2ca02c; font-weight:bold; font-size:18px;">✓</td>
-  <td style="border:1px solid #999; padding:12px; color:#2ca02c; font-weight:bold; font-size:18px;">✓</td>
+  <td class="package">Core / Global</td>
+  <td>€700</td>
+  <td class="tick">✓</td>
+  <td class="tick">✓</td>
+  <td class="tick">✓</td>
 </tr>
 
 </table>
+</div>
+
+<!-- MOBILE VERSION -->
+<div class="mobile">
+
+<div class="card">
+  <h3>Technical</h3>
+  <div class="price">€450</div>
+  <div class="row"><span>Tue Dinner</span><span class="tick">✓</span></div>
+  <div class="row"><span>Wed Dinner</span><span class="tick">✓</span></div>
+  <div class="row"><span>Thu Dinner</span><span class="cross">✗</span></div>
+</div>
+
+<div class="card">
+  <h3>Core / Global</h3>
+  <div class="price">€700</div>
+  <div class="row"><span>Tue Dinner</span><span class="tick">✓</span></div>
+  <div class="row"><span>Wed Dinner</span><span class="tick">✓</span></div>
+  <div class="row"><span>Thu Dinner</span><span class="tick">✓</span></div>
+</div>
+
+</div>
 
 </div>
 
